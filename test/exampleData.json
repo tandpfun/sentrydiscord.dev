@@ -1,0 +1,263 @@
+{
+  "id": "2514436103",
+  "project": "channelbot",
+  "project_name": "channelbot",
+  "project_slug": "channelbot",
+  "logger": null,
+  "level": "error",
+  "culprit": "CommandNameCommand.run(C:\\Users\\Thijs\\Desktop\\ChannelBot\\Github\\v5\\src\\bot\\commands\\Admin\\error)",
+  "message": "",
+  "url": "https://sentry.io/organizations/channelbot/issues/2514436103/?referrer=webhooks_plugin",
+  "triggering_rules": [
+    "SentryDiscord"
+  ],
+  "event": {
+    "event_id": "3714c2d30ddd4429b36963c04d365e7e",
+    "level": "error",
+    "version": "7",
+    "type": "error",
+    "fingerprint": [
+      "{{ default }}"
+    ],
+    "culprit": "CommandNameCommand.run(C:\\Users\\Thijs\\Desktop\\ChannelBot\\Github\\v5\\src\\bot\\commands\\Admin\\error)",
+    "logger": "",
+    "platform": "node",
+    "timestamp": 1626371100.294883,
+    "received": 1626371100.294883,
+    "environment": "production",
+    "user": {
+      "id": "276544649148235776",
+      "username": "Coding#0001"
+    },
+    "breadcrumbs": {
+      "values": [
+        {
+          "timestamp": 1626371097.034883,
+          "type": "default",
+          "category": "console",
+          "level": "info",
+          "message": "\u001b[92m\u001b[1m[Shard 0]\u001b[22m\u001b[39m Connected to database"
+        },
+        {
+          "timestamp": 1626371097.198883,
+          "type": "http",
+          "category": "http",
+          "level": "info",
+          "data": {
+            "method": "GET",
+            "status_code": 200,
+            "url": "https://discord.com/api/v9/gateway/bot"
+          }
+        },
+        {
+          "timestamp": 1626371097.717883,
+          "type": "default",
+          "category": "console",
+          "level": "info",
+          "message": "\u001b[92m\u001b[1m[Shard 0]\u001b[22m\u001b[39m Online in \u001b[92m16 servers\u001b[39m."
+        },
+        {
+          "timestamp": 1626371097.914883,
+          "type": "http",
+          "category": "http",
+          "level": "info",
+          "data": {
+            "method": "POST",
+            "status_code": 200,
+            "url": "https://discord.com/api/v9/webhooks/856604534058385478/BMZUdjdnfl0_hMnCzyM2K2md4LXfFbzfR6gmMJdH9IwaMGm6bosgRtfSBAuDMj5zD5Ph?wait=true"
+          }
+        },
+        {
+          "timestamp": 1626371100.286883,
+          "type": "default",
+          "category": "console",
+          "level": "info",
+          "message": "\u001b[33m\u001b[1m[Admin Command] [Shard 0]\u001b[22m\u001b[39m Coding#0001 (276544649148235776) used the error command in ChannelBot Development (725138673787600926)"
+        },
+        {
+          "timestamp": 1626371100.287883,
+          "type": "default",
+          "category": "console",
+          "level": "info",
+          "message": "yo"
+        }
+      ]
+    },
+    "exception": {
+      "values": [
+        {
+          "type": "ReferenceError",
+          "value": "ianHaveFunFixingThis is not defined",
+          "stacktrace": {
+            "frames": [
+              {
+                "function": "processTicksAndRejections",
+                "module": "task_queues",
+                "filename": "internal/process/task_queues.js",
+                "abs_path": "internal/process/task_queues.js",
+                "lineno": 93,
+                "colno": 5,
+                "in_app": false
+              },
+              {
+                "function": "CommandHandler.handle",
+                "module": "C:\\Users\\Thijs\\Desktop\\ChannelBot\\Github\\v5\\lib\\classes\\commandhandler",
+                "filename": "C:\\Users\\User\\Desktop\\Folder\\lib\\classes\\commandhandler.js",
+                "abs_path": "C:\\Users\\Thijs\\Desktop\\ChannelBot\\Github\\v5\\lib\\classes\\commandhandler.js",
+                "lineno": 182,
+                "colno": 15,
+                "pre_context": [
+                  "      }",
+                  "      if (validate === '') return;",
+                  "      if (validate)",
+                  "        return message.reply(",
+                  "          functions.embed('RED', `Whoops!`, `${config.emoji.no} ${validate}`)",
+                  "        );",
+                  ""
+                ],
+                "context_line": "      command.run({",
+                "post_context": [
+                  "        client: this.client,",
+                  "        message,",
+                  "        settings,",
+                  "        args,",
+                  "        channel: message.channel,",
+                  "        member: message.member,",
+                  "        author: message.author,"
+                ],
+                "in_app": true
+              },
+              {
+                "function": "CommandNameCommand.run",
+                "module": "C:\\Users\\Thijs\\Desktop\\ChannelBot\\Github\\v5\\src\\bot\\commands\\Admin\\error",
+                "filename": "C:\\Users\\User\\Desktop\\Folder\\src\\file.js",
+                "abs_path": "C:\\Users\\Thijs\\Desktop\\ChannelBot\\Github\\v5\\src\\bot\\commands\\Admin\\error.js",
+                "lineno": 18,
+                "colno": 5,
+                "pre_context": [
+                  "      args: [],",
+                  "      enableSlashCommand: false,",
+                  "      premium: false,",
+                  "    });",
+                  "  }",
+                  "",
+                  "  async run({ client, message, settings, args, config, functions }) {"
+                ],
+                "context_line": "    ianHaveFunFixingThis();",
+                "post_context": [
+                  "  }",
+                  "};",
+                  ""
+                ],
+                "in_app": true
+              }
+            ]
+          },
+          "mechanism": {
+            "type": "generic",
+            "handled": true
+          }
+        }
+      ]
+    },
+    "tags": [
+      [
+        "environment",
+        "production"
+      ],
+      [
+        "handled",
+        "yes"
+      ],
+      [
+        "level",
+        "error"
+      ],
+      [
+        "mechanism",
+        "generic"
+      ],
+      [
+        "sentry:user",
+        "id:276544649148235776"
+      ]
+    ],
+    "extra": {
+      "Channel ID": "856596272199106570",
+      "Channel Name": "errors",
+      "Channel Type": "GUILD_TEXT",
+      "Guild ID": "725138673787600926",
+      "Guild Name": "ChannelBot Development",
+      "Message Content": "ca.error",
+      "Message ID": "865287851422515210"
+    },
+    "sdk": {
+      "name": "sentry.javascript.node",
+      "version": "6.9.0",
+      "integrations": [
+        "InboundFilters",
+        "FunctionToString",
+        "Console",
+        "Http",
+        "OnUncaughtException",
+        "OnUnhandledRejection",
+        "LinkedErrors",
+        "Mongo"
+      ],
+      "packages": [
+        {
+          "name": "npm:@sentry/node",
+          "version": "6.9.0"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "type": "future_timestamp",
+        "name": "timestamp",
+        "sdk_time": "2021-07-15T17:46:07.878000020+00:00",
+        "server_time": "2021-07-15T17:45:00.294882939+00:00"
+      }
+    ],
+    "key_id": "1629793",
+    "project": 5770602,
+    "grouping_config": {
+      "enhancements": "eJybzDRxY3J-bm5-npWRgaGlroGxrpHxBABcYgcZ",
+      "id": "newstyle:2019-10-29"
+    },
+    "_metrics": {
+      "bytes.ingested.event": 3392,
+      "bytes.stored.event": 5892
+    },
+    "_ref": 5770602,
+    "_ref_version": 2,
+    "hashes": [
+      "3e59471234a107bd3414c7f3d1b8b4bc",
+      "05dc2351c2765a7e90bf6b8c0588402d"
+    ],
+    "location": "C:\\Users\\User\\Desktop\\Folder\\src\\file.js",
+    "metadata": {
+      "filename": "C:\\Users\\Thijs\\Desktop\\Folder\\src\\file.js",
+      "function": "CommandNameCommand.run",
+      "type": "ReferenceError",
+      "value": "ianHaveFunFixingThis is not defined"
+    },
+    "title": "ReferenceError: ianHaveFunFixingThis is not defined",
+    "_meta": {
+      "timestamp": {
+        "": {
+          "err": [
+            [
+              "future_timestamp",
+              {
+                "sdk_time": "2021-07-15T17:46:07.878000020+00:00",
+                "server_time": "2021-07-15T17:45:00.294882939+00:00"
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "id": "3714c2d30ddd4429b36963c04d365e7e"
+  }
+}
